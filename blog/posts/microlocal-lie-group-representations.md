@@ -6,10 +6,10 @@ Status: In progress
 
 ## Microlocal Analysis on Representations
 
-What is the meaning of microlocal? The term first originated in the 1970s, in the context of Fourier analysis on $\R^n$ and referred to the process of taking $\sum f_i := f \in L^2(\R^n)$ where both $f_i$ and $\hat{f_i}$ are localized. We want to do the same thing for a vector $v$ in a unitary representation $\pi$ of a Lie group $G$. 
+What is the meaning of microlocal? The term first originated in the 1970s, in the context of Fourier analysis on $\mathbb{R}^n$ and referred to the process of taking $\sum f_i := f \in L^2(\mathbb{R}^n)$ where both $f_i$ and $\hat{f_i}$ are localized. We want to do the same thing for a vector $v$ in a unitary representation $\pi$ of a Lie group $G$. 
 
 <aside>
-💡 As we will see later, when $G$ is the Heisenberg group, and $\pi = L^2(\R^n)$ , the second notion recovers the first one.
+💡 As we will see later, when $G$ is the Heisenberg group, and $\pi = L^2(\mathbb{R}^n)$ , the second notion recovers the first one.
 
 </aside>
 
@@ -22,7 +22,7 @@ Outline
 We first focus on $G = \mathrm{SO}(3)$. There’s one irreducible representation of each odd dimension $(2\ell + 1)$ realized as the space of “spherical harmonics” :
 
 $$
-V_\ell := \{ \text{ polynomials } P \text{ on } \R^3 \text{ of degree } \ell : \Delta P = 0\} .
+V_\ell := \{ \text{ polynomials } P \text{ on } \mathbb{R}^3 \text{ of degree } \ell : \Delta P = 0\} .
 $$
 
 There is a natural action of $g$ by $g. P(x,y,z) = P((x,y,z)g)$ and norm given by integrating the square over the sphere $S^2$.  
@@ -194,13 +194,13 @@ $$
 
 Interpretation : Roughly our inequality says $ab \gtrsim \ell$, which if we think of our vector in coordinates, it gives a lower bound on the area of something $v$ is allowed to be localized. 
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled.png)
+![Untitled](Untitled.png)
 
 ### Interlude : The Heisenberg Group
 
-Take $L^2(\R)$ and define the operators $T_x : f(t) \mapsto f(t+x)$ and $M_y : f(t) \mapsto e^{ity}f(t)$. They satisfy $T_xT_{x’} = T_{x + x’}$ and $M_y M_{y’} = M_{y + y’}$. Also $(T_xM_y f) = e^{ixy}(M_y T_x f)$. SO these two groups generate a “3 dimensional” group and gives a rep of $\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ on $L^2(\R)$ via 
+Take $L^2(\mathbb{R})$ and define the operators $T_x : f(t) \mapsto f(t+x)$ and $M_y : f(t) \mapsto e^{ity}f(t)$. They satisfy $T_xT_{x’} = T_{x + x’}$ and $M_y M_{y’} = M_{y + y’}$. Also $(T_xM_y f) = e^{ixy}(M_y T_x f)$. SO these two groups generate a “3 dimensional” group and gives a rep of $\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ on $L^2(\mathbb{R})$ via 
 
-$\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ acts on $L^2(\R)$ as $e^{iz}T_xM_y$. This is the Heisenberg group. The Lie algebra action is given by 
+$\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ acts on $L^2(\mathbb{R})$ as $e^{iz}T_xM_y$. This is the Heisenberg group. The Lie algebra action is given by 
 
 $$
 Xf(t) = \frac{\,df}{\,dt}, \ Yf(t) = itf(t), \ Zf(t) = i f(t). 
@@ -281,7 +281,7 @@ $$
 
 Let’s also suppose that $a^2 + b^2 < 0.9\ell^2$. Then $v = v^+ + v^-$ where $v^+$ is localized at $(a,b, \sqrt{\ell - a^2 - b^2})$ and $v^{-}$ is localized at $(a,b, -\sqrt{\ell^2 - a^2 - b^2}).$
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%201.png)
+![Untitled](Untitled_1.png)
 
 Idea: We already know $J_1^2 + J_2^2 + J_3^2 = -\ell(\ell+1)$, so morally speaking once we know $J_1$ and $J_2$, we know $J_3$ up to sign. 
 So instead let’s write $v$ as a linear combination of localized vectors $\int_{\tau \in \mathcal{O}} v_\tau$ and we will show that only $\tau^+$ and $\tau^{-}$ contribute, where $\tau^+$ and $\tau^-$ are the two points in the picture above. 
@@ -311,7 +311,7 @@ $$
 Note that the central feature we used was that the projection $\mathrm{Lie}(G)^\ast \to \langle J_1, J_2 \rangle^\ast$ is from a $3$-dimensional space to a $2$-dimensional space, so it’s not injective. However, if we restrict it to the coadjoint orbit 
 
 $$
-\mathcal{O}_{\pi} \to \R^2,
+\mathcal{O}_{\pi} \to \mathbb{R}^2,
 $$
 
 is $2:1$ away from the equator. In general, in higher rank if we find a projection that’s $1:1$, it’s enough to check localization under a smaller set of things. In other words, if $H \subseteq G$ is such that 
@@ -350,7 +350,7 @@ where $Y \in \mathrm{Lie}(G)$. Claim says that $\langle \lambda, [X,Y] \rangle$ 
 
 $$
 X.\lambda , Y.\lambda \to \langle \lambda, [X,Y]\rangle \\
-T_\lambda \times T_\lambda \to \R,
+T_\lambda \times T_\lambda \to \mathbb{R},
 $$
 
 is nondegenerate. 
@@ -370,9 +370,9 @@ $$
 \chi \cdot \sqrt{j}(e^X) = \left(\text{ volume form } \left(\frac{\omega}{2\pi}\right)^{\dim \mathcal{O}_\pi/2} \text{ on } \mathcal{O}_\pi\right)^\wedge.
 $$
 
-So now we can quantify the fact that vectors cannot be *too* localized near $\lambda$. If $\dim \mathcal{O} = 2$, we cannot localize on sets of co-area $\ll 1$. This was the analogue of the condition $ab \gtrsim \ell$. In higher dimensions, this would say like the $\omega$-volume $\ll 1$, but this is not the only constraint! We also need the areas of transverse slices to not be too small either. For example, let’s look at the following picture in $\R^4$, which we think of as a piece of a $4$-dimensional orbit. 
+So now we can quantify the fact that vectors cannot be *too* localized near $\lambda$. If $\dim \mathcal{O} = 2$, we cannot localize on sets of co-area $\ll 1$. This was the analogue of the condition $ab \gtrsim \ell$. In higher dimensions, this would say like the $\omega$-volume $\ll 1$, but this is not the only constraint! We also need the areas of transverse slices to not be too small either. For example, let’s look at the following picture in $\mathbb{R}^4$, which we think of as a piece of a $4$-dimensional orbit. 
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%202.png)
+![Untitled](Untitled_2.png)
 
 Then we cannot localize to a set that looks like this which is very narrow in one direction and very long in the other, even if the volume is one. This is related to a topic people have been studying in symplectic geometry called “symplectic capacity”. See Fefferman’s paper “The Uncertainty Principle” for some related discussions. 
 
@@ -396,10 +396,10 @@ We should always think of $a$ as a smooth function which looks for instance like
 
 ### Example
 
-$G = S^1 = \R/\Z$, $\mathrm{Lie}(G) = \R$ and consider the irreducible representations $\pi_m : x \in \R/\Z \to e^{2\pi i mx }.$ Then 
+$G = S^1 = \mathbb{R}/\Z$, $\mathrm{Lie}(G) = \mathbb{R}$ and consider the irreducible representations $\pi_m : x \in \mathbb{R}/\Z \to e^{2\pi i mx }.$ Then 
 
 $$
-\mathrm{Op}(a)v = \left(\int_{x \in \R} a^\vee(x)e^{imx}\,dx \right)v = a(m)v.
+\mathrm{Op}(a)v = \left(\int_{x \in \mathbb{R}} a^\vee(x)e^{imx}\,dx \right)v = a(m)v.
 $$
 
 So $\mathrm{Op}(a)$ just undoes the Fourier transform, and acts by scalar multiplication. 
@@ -425,7 +425,7 @@ Properties of $a \mapsto \mathrm{Op}(a)$
     
     These conditions are most accurate in range when $a$ and $b$ are approximately constant on the localization scale, $(\lambda_i + O(\ell^{1/2}))$, but they are not allowed to oscillate within this range. 
     
-- Example : If $G$ is the Heisenberg group and $\pi = L^2(\R)$, then $\mathrm{Op}(a)$ is a pseudodifferential operator.
+- Example : If $G$ is the Heisenberg group and $\pi = L^2(\mathbb{R})$, then $\mathrm{Op}(a)$ is a pseudodifferential operator.
 
 Let’s prove that if $v$ is in the image of $\mathrm{Op}(a)$, with $a$ a bump around $\lambda$, then $v$ is localized at $\lambda$. To do this we just need to bound $||\bar{X}v||$. We have
 
@@ -445,7 +445,7 @@ We can also consider $T$-dependent sets $X = X_T$ and $T$-dependent elements $x 
 
 By a *class*, we mean a fixed collection of $T$-dependent sets. We say that a $T$-dependent element lies in a given class if it lies in one of the $T$-dependent sets in the given collection. For example, given a $T$-dependent normed vector space , the class $O(1)$ inside $V$ is defined to consist of all $T$-dependent subsets $S=S_T$ of $V = V_T$ such that there is a fixed $C \geq 0$ so that for all $T$, we have $||v_T|| \leq C%$ for all $v_T \in S_T$. 
 
-For a real vector space $V$, recall that the Schwartz space $\mathcal{S}(V)$ consists of all functions whose derivatives decay faster than any polynomial. We denote $V^\wedge := \mathrm{Hom}(V, i\R)$  the imaginary dual space so that for $x \in V$ and $\xi \in V^\wedge$, the natural pairing $\langle x, \xi \rangle \in i\R$. The Fourier transform is given by 
+For a real vector space $V$, recall that the Schwartz space $\mathcal{S}(V)$ consists of all functions whose derivatives decay faster than any polynomial. We denote $V^\wedge := \mathrm{Hom}(V, i\mathbb{R})$  the imaginary dual space so that for $x \in V$ and $\xi \in V^\wedge$, the natural pairing $\langle x, \xi \rangle \in i\mathbb{R}$. The Fourier transform is given by 
 
 $$
 \mathcal{S}(V) \to \mathcal{S}(V^\ast) \\ 
@@ -513,7 +513,7 @@ This follows by combining (Nelson 2021, Lem 14.5, Thm 14.12) with $h = 1/T$. 
 
 </aside>
 
-We will investigate this definition with a number of examples for the groups $\mathrm{SO}(3)$ and $\mathrm{PGL}_2(\R)$ in the next section. 
+We will investigate this definition with a number of examples for the groups $\mathrm{SO}(3)$ and $\mathrm{PGL}_2(\mathbb{R})$ in the next section. 
 
 <aside>
 💡 We say that an element $\xi \in \mathfrak{g}^\wedge$ is *regular* if its $G$-centralizer has smallest possible dimension. We denote by $\mathfrak{g}_\mathrm{reg}^\wedge$ the subset of regular elements. We say that a $T$-dependent element $\xi = \xi_T$ of $\mathfrak{g}^\wedge$ is *uniformly regular* if $T^{-1}\tau = T^{-1}\tau_T$ lies in some fixed compact subset of $\mathfrak{g}_\mathrm{reg}^\wedge.$
@@ -523,7 +523,7 @@ We will investigate this definition with a number of examples for the groups $\m
 Let $\pi = \pi_T$ be a $T$-dependent irreducible unitary representation of $G$. Assume that either 
 
 1. $G$ is reductive and $\pi$ is tempered, or 
-2. $G = \mathrm{GL}_n(\R)$ and $\pi$ is generic. 
+2. $G = \mathrm{GL}_n(\mathbb{R})$ and $\pi$ is generic. 
 
 Assume that the infinitesimal character $\lambda_\pi$ of $\pi$ has the property that its rescaling $T^{-1}\lambda_\pi$ lies in a fixed compact collection of infinitesimal characters. Define the $G$-invariant subset $\mathcal{O}_\pi \subseteq \mathfrak{g}^\wedge$, as follows. In the first case (1), let it denote the coadjoint orbit assigned to $\pi$ by the Kirillov formula. In the second case (2), let it denote the preimage of $\lambda_\pi$ \in $\mathfrak{g}^\wedge$ under the natural map. 
 
@@ -599,7 +599,7 @@ $$
 The imaginary dual of the Lie algebra identifies with the space of imaginary triples of real numbers
 
 $$
-\mathfrak{so}(3)^\wedge \cong i\R^3.
+\mathfrak{so}(3)^\wedge \cong i\mathbb{R}^3.
 $$
 
 Let $\pi$ be a complex representation of $\mathrm{SO}(3)$. It can be decomposed into eigenspaces for $R_3$. Since $\exp(2\pi R_3) = 1$, the eigenvalues for the action of $iR_3$ are given by integers: 
@@ -657,7 +657,7 @@ Hence every vector in $M$ is localized at the $T$-dependent element $\tau \in \m
 Let $M$ denote the class of $T$-dependent vectors in $\pi$ of the form $\sum a_m e_m$ with the following properties :
 
 1. $a_m = 0$ unless $m = O(T^{1/2})$
-2. The function of $\theta \in \R / \Z$ given by 
+2. The function of $\theta \in \mathbb{R} / \Z$ given by 
 $a(\theta) := \sum_n a_n e(n\theta)$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $\ell, k \in \Z_{\geq 0}$, 
 
 $$
@@ -669,7 +669,7 @@ $$
 
 where $a^{(\ell)}$ is the $\ell$th derivative and $||\cdot||$ is the distance to the nearest integer.  Condition number $2$ after Parseval implies that $\sum |a_m|^2 = O(1)$. 
 
-Now take $f \in C_c^\infty(\R)$ fixed. Then the $T$-dependent vector $\sum a_m e_m$ with coefficients 
+Now take $f \in C_c^\infty(\mathbb{R})$ fixed. Then the $T$-dependent vector $\sum a_m e_m$ with coefficients 
 
 $$
 a_m := T^{-1/4}f\left(\frac{m}{T^{1/2}}\right),
@@ -687,15 +687,15 @@ Hence every element of $M$ is localized at the $T$-dependent element $\tau \in \
 
 $\tau := (0, -iT, 0)$. 
 
-### The Group $\mathrm{PGL}_2(\R)$ via Weight Vectors
+### The Group $\mathrm{PGL}_2(\mathbb{R})$ via Weight Vectors
 
-Let $\pi$ be the $T$-dependent representation of $\rm{PGL}_2(\R)$ given by the tempered principal series representation $\pi(t, \epsilon)$, where $t = t_T := T$, while $\epsilon \in \{\pm 1\}$ is fixed. Let $M$ be the class of $T$-dependent vectors $v \in \pi$ of the form $v = \sum_m a_m e_m$ where the coefficients satisfy the support condition 
+Let $\pi$ be the $T$-dependent representation of $\rm{PGL}_2(\mathbb{R})$ given by the tempered principal series representation $\pi(t, \epsilon)$, where $t = t_T := T$, while $\epsilon \in \{\pm 1\}$ is fixed. Let $M$ be the class of $T$-dependent vectors $v \in \pi$ of the form $v = \sum_m a_m e_m$ where the coefficients satisfy the support condition 
 
 $$
 a_m \neq 0 \implies m = O(T^{1/2})
 $$
 
-and the function $a(\theta) = \sum a_n e(n\theta)$, $\theta \in \R/\Z$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $k, \ell \in \Z_{\geq 0}$, 
+and the function $a(\theta) = \sum a_n e(n\theta)$, $\theta \in \mathbb{R}/\Z$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $k, \ell \in \Z_{\geq 0}$, 
 
 $$
 a^{(\ell)}(\theta) \ll T^{1/4 +\ell/2}\left(1 + \frac{||\theta||}{T^{-1/2}}\right)^{-k},
@@ -756,7 +756,7 @@ We turn to another example in the Kirillov model.
 
 ## Localization in the Kirillov Model
 
-### The Group $\mathrm{PGL}_2(\R)$ via Kirillov Model
+### The Group $\mathrm{PGL}_2(\mathbb{R})$ via Kirillov Model
 
 The action of the Borel $B$ on the Kirillov model is explicit. We have
 
@@ -807,7 +807,7 @@ $$
 fW(y) = \frac{1}{iy}(\Omega_\pi - (y\partial_y)^2 + y\partial_y)W(y).
 $$
 
-Now let $\pi$ be a $T$-dependent generic irreducible unitary representation of $\mathrm{PGL}_2(\R)$ realized in its Kirillov model with respect to $\psi(x) := e^{ix}$. Moreover, write $\pi = \pi(t, \epsilon)$ with $t = O(T)$ so that $\Omega_\pi = O(T^2)$. 
+Now let $\pi$ be a $T$-dependent generic irreducible unitary representation of $\mathrm{PGL}_2(\mathbb{R})$ realized in its Kirillov model with respect to $\psi(x) := e^{ix}$. Moreover, write $\pi = \pi(t, \epsilon)$ with $t = O(T)$ so that $\Omega_\pi = O(T^2)$. 
 
 Now let $\alpha$ and $\rho$ be $T$-dependent real numbers with $\rho = O(T)$ and $\alpha \asymp T$. Let $M$ denote the class of all $T$-dependent vectors $W \in \pi$ that are given in the Kirillov model for large enough $T$ by the formula 
 
@@ -815,7 +815,7 @@ $$
 W(y) = T^{1/4}|y|^{i\rho}\phi\left(\frac{y-\alpha}{T^{1/2}}\right),
 $$
 
-where $\phi$ belongs to some fixed bounded subset of the space $C_c^\infty(\R)$. Then there are a number of nice properties of this class of vectors that we seek to verify. We have
+where $\phi$ belongs to some fixed bounded subset of the space $C_c^\infty(\mathbb{R})$. Then there are a number of nice properties of this class of vectors that we seek to verify. We have
 
 1. Each $W \in M$ satisfies $||W|| = O(1)$. 
 2. For each $W \in M$ we have 
@@ -865,7 +865,7 @@ Informally, at least when $\beta \asymp T$, this says that $wW(y)$ looks roughly
 
 </aside>
 
-Set $\Gamma := \mathrm{PGL}_2(\Z) < G$. Suppose that the representation $\pi$ of $G$ is equipped with an embedding $\pi \hookrightarrow L^2_{\text{cusp}}(\Gamma \backslash G)$ as a Hecke eigenspace with Hecke eigenvalues $\lambda : \mathbb{N} \to \mathbb{C}$. 
+Set $\Gamma := \mathrm{PGL}_2(\mathbb{Z}) < G$. Suppose that the representation $\pi$ of $G$ is equipped with an embedding $\pi \hookrightarrow L^2_{\text{cusp}}(\Gamma \backslash G)$ as a Hecke eigenspace with Hecke eigenvalues $\lambda : \mathbb{N} \to \mathbb{C}$. 
 
 Then each $\varphi \in \pi$ admits a Whittaker expansion 
 
