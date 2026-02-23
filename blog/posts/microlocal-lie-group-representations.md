@@ -19,7 +19,7 @@ Outline
 2. Properties & Examples
 3. Op-calculus : producing and manipulating localized vectors
 
-We first focus on $G = \mathrm{SO}(3)$. There’s one irreducible representation of each odd dimension $(2\ell + 1)$ realized as the space of “spherical harmonics” :
+We first focus on $G = \mathrm{SO}(3)$. There's one irreducible representation of each odd dimension $(2\ell + 1)$ realized as the space of "spherical harmonics'' :
 
 $$
 V_\ell := \{ \text{ polynomials } P \text{ on } \mathbb{R}^3 \text{ of degree } \ell : \Delta P = 0\} .
@@ -63,7 +63,7 @@ $$
 [J_1, J_2] = J_3, \ [J_2, J_3] = J_1, \ [J_3, J_1] = J_2.
 $$
 
-The basis $Y_m^\ell$ of spherical harmonics for $V_\ell$ diagonalizees the action of $J_3$ by $J_3(Y_m^\ell) = (-im)Y_m^\ell$. In this sense, these are the weight vectors for the action of $\mathrm{SO}(3)$. For example, this basis is given in the second example for $V_2$, i.e. $Y_2^2 = (x+iy)^2$, $Y_1^2 = (x+iy)z$, $\dots$ etc. Although $Y_m^\ell$ gives an explicit basis, the action of $\mathrm{SO}(3)$ is generally complicated ; only the $z$-axis rotations are easy. One thing in particular we’d like to understand is the matrix coefficients $\langle g Y_m^\ell, Y_{m’}^\ell\rangle$.
+The basis $Y_m^\ell$ of spherical harmonics for $V_\ell$ diagonalizees the action of $J_3$ by $J_3(Y_m^\ell) = (-im)Y_m^\ell$. In this sense, these are the weight vectors for the action of $\mathrm{SO}(3)$. For example, this basis is given in the second example for $V_2$, i.e. $Y_2^2 = (x+iy)^2$, $Y_1^2 = (x+iy)z$, $\dots$ etc. Although $Y_m^\ell$ gives an explicit basis, the action of $\mathrm{SO}(3)$ is generally complicated ; only the $z$-axis rotations are easy. One thing in particular we'd like to understand is the matrix coefficients $\langle g Y_m^\ell, Y_{m'}^\ell\rangle$.
 
 <aside>
 💡 Exercise : One can show that for fixed $g \in \mathrm{SO}(3)$, $g \neq 1$ and $g$ not a $z$-axis rotation, that $\langle gY_\ell^\ell, Y_\ell^\ell \rangle$ decays exponentially in $\ell$, but that this is not the case for $Y_0^\ell$.
@@ -84,13 +84,13 @@ $$
 \chi_{V_\ell}(g) = e^{-i\ell \theta} + \dots + e^{i\ell \theta} = \frac{e^{i(\ell + 1/2)\theta} - e^{-i(\ell + 1/2)\theta}}{e^{i\theta/2} - e^{-i\theta/2}}.
 $$
 
-In the 1960s, Kirillov observed that $\hat{\chi_V}$ looks “very nice”. First, we can consider $\chi_V$ as a function on $\mathrm{Lie}(G)$ by $X \mapsto \chi_V(\exp X)$. In this case 
+In the 1960s, Kirillov observed that $\hat{\chi_V}$ looks "very nice''. First, we can consider $\chi_V$ as a function on $\mathrm{Lie}(G)$ by $X \mapsto \chi_V(\exp X)$. In this case 
 
 $$
 \chi_{V_\ell}(\exp X) = (\text{ same formula) with } \theta = \sqrt{x^2 + y^2 + z^2},
 $$
 
-where $x,y,z$ are the Lie algebra coordinates of $X = \begin{bmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{bmatrix}$. Pulling back by $X \mapsto \exp(X)$ doesn’t preserve measure, but it has a nontrivial Jacobian : $d(\exp X) = j(X) \,dX$. In our case, $J(X) = \left(\frac{e^{i\theta/2} - e^{-i\theta/2}}{i\theta}\right)^2.$
+where $x,y,z$ are the Lie algebra coordinates of $X = \begin{bmatrix} 0 & -z & y \\ z & 0 & -x \\ -y & x & 0 \end{bmatrix}$. Pulling back by $X \mapsto \exp(X)$ doesn't preserve measure, but it has a nontrivial Jacobian : $d(\exp X) = j(X) \,dX$. In our case, $J(X) = \left(\frac{e^{i\theta/2} - e^{-i\theta/2}}{i\theta}\right)^2.$
 
 ### Kirillov
 
@@ -100,13 +100,13 @@ $$
 \sqrt{j(X)} \chi_{V_\ell}(\exp X) = \left[\frac{e^{i(\ell + 1/2)\theta} - e^{-i(\ell + 1/2)\theta}}{i\theta}\right], \ \theta = \sqrt{x^2 + y^2 + z^2},
 $$
 
-(so that we think of $\theta$ as the “radius” on $\mathrm{Lie}(\mathrm{SO}_3).)$ Then 
+(so that we think of $\theta$ as the "radius'' on $\mathrm{Lie}(\mathrm{SO}_3).)$ Then 
 
 $$
 \sqrt{j}\chi_{V_\ell}(e^X) = \left(\text{ Fourier transform of sphere w/ radius } \ell + \frac{1}{2}\right) \times \frac{1}{2\pi(\ell + 1/2)}.
 $$
 
-This is Kirillov’s form of the character formula for $\mathrm{SO}(3).$ By the Fourier transform, we really mean the FT of the area measure on the sphere, i.e. 
+This is Kirillov's form of the character formula for $\mathrm{SO}(3).$ By the Fourier transform, we really mean the FT of the area measure on the sphere, i.e. 
 
 $$
 \hat{\mu_S}(k) = \int_{S^2} e^{ikx}\,dx. 
@@ -124,7 +124,7 @@ $$
 2\ell + 1 = \int_{S^2} \,dx,
 $$
 
-i.e. that the area of the sphere is equal to the dimension of the representation. This suggests that the existence of a partition of $\mathcal{O}_\pi = S^2$ into $2\ell + 1$ pieces with a basis element corresponding to each piece. In other words, we’d like to divide $\mathcal{O}_\pi$ into balls $B_i$, each of area $1$ and centered at $\lambda_i \in \mathrm{Lie}(G)^\ast$ and a basis $v_i$ of $V_\ell$ indexed by $B_i$. *Moreover*, for each $X \in \mathrm{Lie}(G)$, we’d like to demand 
+i.e. that the area of the sphere is equal to the dimension of the representation. This suggests that the existence of a partition of $\mathcal{O}_\pi = S^2$ into $2\ell + 1$ pieces with a basis element corresponding to each piece. In other words, we'd like to divide $\mathcal{O}_\pi$ into balls $B_i$, each of area $1$ and centered at $\lambda_i \in \mathrm{Lie}(G)^\ast$ and a basis $v_i$ of $V_\ell$ indexed by $B_i$. *Moreover*, for each $X \in \mathrm{Lie}(G)$, we'd like to demand 
 
 $$
 X \cdot v_i \approx i \langle X, \lambda_i \rangle v_i,
@@ -157,14 +157,14 @@ $$
 
 </aside>
 
-Note that functions in $V_\ell$ restricted to $S^2$ forms an $\ell(\ell+1)$ eigenspace for $\Delta_{S^2}$. In fact, $-(J_1^2 + J_2^2 + J_3^2)$ is the Casimir operator which acts by $\ell(\ell+1)$ on $V_\ell$. It has to act by a scalar by Schur’s lemma. 
+Note that functions in $V_\ell$ restricted to $S^2$ forms an $\ell(\ell+1)$ eigenspace for $\Delta_{S^2}$. In fact, $-(J_1^2 + J_2^2 + J_3^2)$ is the Casimir operator which acts by $\ell(\ell+1)$ on $V_\ell$. It has to act by a scalar by Schur's lemma. 
 
 ### Limits to Localization
 
 A vector cannot be $R$-localized if $R < 1/2\sqrt{\ell}$. For instance, $Y_\ell^\ell$ is most localized and lives in a cap on top of the sphere of radius $\approx \sqrt{\ell}$. 
 
-Before we prove this, it’s easier to first see that a vector cannot be $0$-localized, i.e. cannot be a common eigenvector for $\mathrm{Lie}(G)$. Indeed if $J_1 v \propto v$, then $[J_i, J_j]$ would kill $v$, which implies $J_i v = 0$ for all $i$. 
-Now to prove the first thing, without loss of generality let’s take $\lambda = (0,0, \ell+1/2)$. Let $a = ||J_1v||, b = ||J_2v||$ where $||v|| = 1$. 
+Before we prove this, it's easier to first see that a vector cannot be $0$-localized, i.e. cannot be a common eigenvector for $\mathrm{Lie}(G)$. Indeed if $J_1 v \propto v$, then $[J_i, J_j]$ would kill $v$, which implies $J_i v = 0$ for all $i$. 
+Now to prove the first thing, without loss of generality let's take $\lambda = (0,0, \ell+1/2)$. Let $a = ||J_1v||, b = ||J_2v||$ where $||v|| = 1$. 
 
 <aside>
 💡 Claim : $ab + \frac{1}{\ell}a^2 + \frac{1}{\ell}b^2 \geq \frac{\ell(\ell+1)}{2}$ $\implies$ either $a$ or $b > \sqrt{\ell}/2$.
@@ -183,7 +183,7 @@ $$
 ||J_3v||^2 = \langle [J_1, J_2]v, J_3 v\rangle = \langle (J_1 J_2 - J_2J_1 )v, J_3v\rangle  \\ = \langle J_1J_2v, J_3v\rangle + \langle -J_2J_1v, J_3v\rangle \\
 = \langle J_2v, -J_1J_3v \rangle + \langle J_1v, J_2J_3v\rangle \\
 = \langle J_2v, -J_3J_1v\rangle + \langle J_2v, J_2 v \rangle + \langle J_1v, J_3J_2v\rangle + \langle J_1v, J_1v \rangle \\
-\leq^{Cauchy-Schwarz} \ell ab + b^2 + \ell ab + a^2 = 2\ell a b + a^2 + b^2 .
+\overset{\text{Cauchy--Schwarz}}{\leq} \ell ab + b^2 + \ell ab + a^2 = 2\ell a b + a^2 + b^2 .
 $$
 
 So we obtain that 
@@ -194,11 +194,11 @@ $$
 
 Interpretation : Roughly our inequality says $ab \gtrsim \ell$, which if we think of our vector in coordinates, it gives a lower bound on the area of something $v$ is allowed to be localized. 
 
-![Untitled](Untitled.png)
+![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled.png)
 
 ### Interlude : The Heisenberg Group
 
-Take $L^2(\mathbb{R})$ and define the operators $T_x : f(t) \mapsto f(t+x)$ and $M_y : f(t) \mapsto e^{ity}f(t)$. They satisfy $T_xT_{x’} = T_{x + x’}$ and $M_y M_{y’} = M_{y + y’}$. Also $(T_xM_y f) = e^{ixy}(M_y T_x f)$. SO these two groups generate a “3 dimensional” group and gives a rep of $\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ on $L^2(\mathbb{R})$ via 
+Take $L^2(\mathbb{R})$ and define the operators $T_x : f(t) \mapsto f(t+x)$ and $M_y : f(t) \mapsto e^{ity}f(t)$. They satisfy $T_xT_{x'} = T_{x + x'}$ and $M_y M_{y'} = M_{y + y'}$. Also $(T_xM_y f) = e^{ixy}(M_y T_x f)$. SO these two groups generate a "3 dimensional'' group and gives a rep of $\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ on $L^2(\mathbb{R})$ via 
 
 $\begin{bmatrix} 1 & x & z \\ & 1 & y \\ & & 1\end{bmatrix}$ acts on $L^2(\mathbb{R})$ as $e^{iz}T_xM_y$. This is the Heisenberg group. The Lie algebra action is given by 
 
@@ -212,7 +212,7 @@ $$
 ||itf(t) - \lambda_yf(t)|| \leq R, \ ||f|| = 1, 
 $$
 
-i.e. $\int (t-\lambda_y)^2 |f|^2 \leq R$, i.e. most of the “mass” of $|f|^2$ is within $O(\sqrt{R})$ of $t = \lambda_y$. For $Xf$ to be $R$-localized, we look instead at the Fourier transform so that the condition reads 
+i.e. $\int (t-\lambda_y)^2 |f|^2 \leq R$, i.e. most of the "mass'' of $|f|^2$ is within $O(\sqrt{R})$ of $t = \lambda_y$. For $Xf$ to be $R$-localized, we look instead at the Fourier transform so that the condition reads 
 
 $$
 ||k \hat{f}(k) - \lambda_x \hat{f}|| \leq R, \ ||\hat{f}|| = 1,
@@ -233,7 +233,7 @@ $$
 i \langle \lambda_1, X\rangle \langle v_1, v_2\rangle - i \langle \lambda_2 , X \rangle \langle v_1, v_2 \rangle + O(R) \implies \langle v_1, v_2 \rangle = O\left(\frac{R}{|\lambda_1 - \lambda_2|}\right). 
 $$
 
-Thinking of $R \sim \sqrt{\ell}$, then this is $O(\ell^{-1/2})$ which is basically orthogonal. If we instead had $R$-localization to order $N$, then we’d get $O\left(\frac{R}{|\lambda_1 - \lambda_2|}^N\right)$.  This brings us back to the example of the decay of $\langle g Y_\ell^\ell, Y_\ell^\ell \rangle$. The point is somehow if $g$ doesn’t stabilize $Y_\ell^\ell$, then these vectors are approximately orthogonal. 
+Thinking of $R \sim \sqrt{\ell}$, then this is $O(\ell^{-1/2})$ which is basically orthogonal. If we instead had $R$-localization to order $N$, then we'd get $O\left(\frac{R}{|\lambda_1 - \lambda_2|}^N\right)$.  This brings us back to the example of the decay of $\langle g Y_\ell^\ell, Y_\ell^\ell \rangle$. The point is somehow if $g$ doesn't stabilize $Y_\ell^\ell$, then these vectors are approximately orthogonal. 
 
 Rephrasing, if $v_1 \otimes v_2 \in \pi \otimes \overline{\pi}$ is localized at $(\lambda_1, \lambda_2) \in \mathrm{Lie}(G)^\ast \times \mathrm{Lie}(G)^\ast$, then $\langle v_1, v_2 \rangle$ is negligible unless $|\lambda_1 - \lambda_2| = O(R^{1+\epsilon})$. More generally, if $v \in \pi$ is localized at $\lambda$ and $\ell : \pi \to \mathbb{C}$ is invariant by $H \subseteq G$, then $\ell(v)$ is negligible unless $\lambda$ is near $\mathrm{Lie}(H)^\perp$. 
 
@@ -249,7 +249,7 @@ $$
 ||v - v^\ast|| \leq 0.001.
 $$
 
-We’ll see in the proof exactly how small we can make this $L^2$-norm. So how do we prove this? We think of this in analogy with functions. If we had some function with controlled first derivative, we’d try to get control over higher derivatives by smoothing it. And to smooth it we could imagine convolving with a kernel that sort of gets rid of higher frequencies. To this end, we construct $v^\ast$ as 
+We'll see in the proof exactly how small we can make this $L^2$-norm. So how do we prove this? We think of this in analogy with functions. If we had some function with controlled first derivative, we'd try to get control over higher derivatives by smoothing it. And to smooth it we could imagine convolving with a kernel that sort of gets rid of higher frequencies. To this end, we construct $v^\ast$ as 
 
 $$
 v^\ast = \int_{Y \in \mathrm{Lie}(G)} \varphi_{R^{1+\epsilon}}(Y)\left(e^{\overline{Y}}v\right)\,dY,
@@ -260,7 +260,7 @@ where $\varphi$ is a smooth bump function on $\mathrm{Lie}(G)$ so that $\varphi(
 Proof : For $Y \in \mathrm{Lie}(G)$ we have
 
 $$
-e^{\overline{Y}v} - v = \int_0^1 \frac{\,d}{\,dt}\left(e^{t\overline{Y}}v\right)\,dt = \int_0^1 e^{t\overline{Y}}(\overline{Y}v)\,dt.
+e^{\overline{Y}}v - v = \int_0^1 \frac{\,d}{\,dt}\left(e^{t\overline{Y}}v\right)\,dt = \int_0^1 e^{t\overline{Y}}(\overline{Y}v)\,dt.
 $$
 
 Taking norms of both sides and using that $e^{t\overline{Y}}$ is unitary, we find that 
@@ -271,7 +271,7 @@ $$
 
 since $Y = O(R^{-1-\epsilon})$ in the support of the integral. 
 
-The next property to discuss is this seeming phenomenon where you don’t have to check localization under all the Lie elements because some come for free (recall the $J_3$ calculation in the $SO(3)$ case. )
+The next property to discuss is this seeming phenomenon where you don't have to check localization under all the Lie elements because some come for free (recall the $J_3$ calculation in the $SO(3)$ case. )
 
 So suppose $v$ is $R$-localized to order $N$ for $J_1$ and $J_2$. i.e. 
 
@@ -279,12 +279,12 @@ $$
 J_1v \approx iav, \ J_2v \approx ibv, \ R = O(\sqrt{\ell}).
 $$
 
-Let’s also suppose that $a^2 + b^2 < 0.9\ell^2$. Then $v = v^+ + v^-$ where $v^+$ is localized at $(a,b, \sqrt{\ell - a^2 - b^2})$ and $v^{-}$ is localized at $(a,b, -\sqrt{\ell^2 - a^2 - b^2}).$
+Let's also suppose that $a^2 + b^2 < 0.9\ell^2$. Then $v = v^+ + v^-$ where $v^+$ is localized at $(a,b, \sqrt{\ell - a^2 - b^2})$ and $v^{-}$ is localized at $(a,b, -\sqrt{\ell^2 - a^2 - b^2}).$
 
-![Untitled](Untitled_1.png)
+![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%201.png)
 
 Idea: We already know $J_1^2 + J_2^2 + J_3^2 = -\ell(\ell+1)$, so morally speaking once we know $J_1$ and $J_2$, we know $J_3$ up to sign. 
-So instead let’s write $v$ as a linear combination of localized vectors $\int_{\tau \in \mathcal{O}} v_\tau$ and we will show that only $\tau^+$ and $\tau^{-}$ contribute, where $\tau^+$ and $\tau^-$ are the two points in the picture above. 
+So instead let's write $v$ as a linear combination of localized vectors $\int_{\tau \in \mathcal{O}} v_\tau$ and we will show that only $\tau^+$ and $\tau^{-}$ contribute, where $\tau^+$ and $\tau^-$ are the two points in the picture above. 
 
 The general question is given a vector, how does one write it in terms of localized vectors? The point of the $\mathrm{Op}$-calculus is to give a systematic way to do this. We will show a sort of ad-hoc method for now. To do this, we start with a vector $v_0$ localized at $\lambda_0$. For this step we could take the highest weight vector for instance. To this end, we take 
 
@@ -292,7 +292,7 @@ $$
 v = \frac{1}{\dim V_\ell}\int_{g \in G} \langle v, gv_0 \rangle gv_0.
 $$
 
-This is generally just the orthogonality of matrix coefficients. We think of the RHS as a map $v \mapsto$ RHS. Then it’s clear that this map commutes with $G$ so by Schur’s lemma it has to be a scalar multiple of the identity. To compute the scalar correctly, we take the trace and compute it using the character. It’s a general principle, to be discussed later, that $gv_0$ is localized at $g.\lambda_0$. Since $\langle v, gv_0\rangle$ is just a scalar, we’ve indeed written $v$ as a linear combination of localized vectors. 
+This is generally just the orthogonality of matrix coefficients. We think of the RHS as a map $v \mapsto$ RHS. Then it's clear that this map commutes with $G$ so by Schur's lemma it has to be a scalar multiple of the identity. To compute the scalar correctly, we take the trace and compute it using the character. It's a general principle, to be discussed later, that $gv_0$ is localized at $g.\lambda_0$. Since $\langle v, gv_0\rangle$ is just a scalar, we've indeed written $v$ as a linear combination of localized vectors. 
 
 This is kind of the point of localized vectors in the sense that they are only useful if we can write other vectors in terms of them. This is analogous to the principle of writing arbitrary functions in terms of complex exponentials (Fourier series). 
 
@@ -302,31 +302,31 @@ $$
 \langle v, gv_0 \rangle \text{ is negligible unless } g\lambda_0 \approx (a,b,?),
 $$
 
-since we know that $v$ is localized at $(a,b,\ast)$, we don’t really know the last coordinate yet. And so $gv_0$ has to be localized near the same place in order for this matrix coefficient to not be stupid. Therefore, in the integral, the biggest contribution is from when $g\lambda_0$ is close to $\tau^+$ or $\tau^-$. In other words, 
+since we know that $v$ is localized at $(a,b,\ast)$, we don't really know the last coordinate yet. And so $gv_0$ has to be localized near the same place in order for this matrix coefficient to not be stupid. Therefore, in the integral, the biggest contribution is from when $g\lambda_0$ is close to $\tau^+$ or $\tau^-$. In other words, 
 
 $$
 v = \frac{1}{2\ell+1} \int_{g \lambda_0 \approx \tau^+} \langle v, gv_0\rangle gv_0 + \frac{1}{2\ell+1}\int_{g\lambda_0 \approx \tau^-} \langle v, gv_0\rangle gv_0 + \text{ negligible}.
 $$
 
-Note that the central feature we used was that the projection $\mathrm{Lie}(G)^\ast \to \langle J_1, J_2 \rangle^\ast$ is from a $3$-dimensional space to a $2$-dimensional space, so it’s not injective. However, if we restrict it to the coadjoint orbit 
+Note that the central feature we used was that the projection $\mathrm{Lie}(G)^\ast \to \langle J_1, J_2 \rangle^\ast$ is from a $3$-dimensional space to a $2$-dimensional space, so it's not injective. However, if we restrict it to the coadjoint orbit 
 
 $$
 \mathcal{O}_{\pi} \to \mathbb{R}^2,
 $$
 
-is $2:1$ away from the equator. In general, in higher rank if we find a projection that’s $1:1$, it’s enough to check localization under a smaller set of things. In other words, if $H \subseteq G$ is such that 
+is $2:1$ away from the equator. In general, in higher rank if we find a projection that's $1:1$, it's enough to check localization under a smaller set of things. In other words, if $H \subseteq G$ is such that 
 
-$\mathrm{Lie}(G)^\ast \to \mathrm{Lie}(H)^\ast$ is injective on $\mathcal{O}$, then localization for $H$ implies localization for $G$. This shows that for localization, we don’t always need to understand the entire group. This is convenient when working with models like Kirillov or Whittaker model, which privilege a certain subgroup.  
+$\mathrm{Lie}(G)^\ast \to \mathrm{Lie}(H)^\ast$ is injective on $\mathcal{O}$, then localization for $H$ implies localization for $G$. This shows that for localization, we don't always need to understand the entire group. This is convenient when working with models like Kirillov or Whittaker model, which privilege a certain subgroup.  
 
 ### The area/volume form on $\mathcal{O}$
 
-Vectors cannot be *too* localized near $\lambda$. Recall, we made an argument about commutators last time, and if $v$ were perfectly localized, we’d obtain
+Vectors cannot be *too* localized near $\lambda$. Recall, we made an argument about commutators last time, and if $v$ were perfectly localized, we'd obtain
 
 $$
 0 = [X,Y]v = \langle \lambda, [X,Y]\rangle v,
 $$
 
-and the latter defines a volume form, so this can’t happen. 
+and the latter defines a volume form, so this can't happen. 
 
 Let $G$ be a Lie group and $\mathcal{O}$ and $G$-orbit on $\mathrm{Lie}(G)^\ast$. Let $\lambda \in \mathcal{O}$ and denote $T_\lambda$ the tangent space to $\mathcal{O}$ at $\lambda$. Then the rule 
 
@@ -360,7 +360,7 @@ is nondegenerate.
 
 </aside>
 
-This also kind of explains the scale. Scaling the orbit by $R$ only scales the area measure by $R$ instead of $R^2$, as you’d expect. This is related to the square root limit to localization. 
+This also kind of explains the scale. Scaling the orbit by $R$ only scales the area measure by $R$ instead of $R^2$, as you'd expect. This is related to the square root limit to localization. 
 
 **Kirillov Formula**
 
@@ -370,23 +370,23 @@ $$
 \chi \cdot \sqrt{j}(e^X) = \left(\text{ volume form } \left(\frac{\omega}{2\pi}\right)^{\dim \mathcal{O}_\pi/2} \text{ on } \mathcal{O}_\pi\right)^\wedge.
 $$
 
-So now we can quantify the fact that vectors cannot be *too* localized near $\lambda$. If $\dim \mathcal{O} = 2$, we cannot localize on sets of co-area $\ll 1$. This was the analogue of the condition $ab \gtrsim \ell$. In higher dimensions, this would say like the $\omega$-volume $\ll 1$, but this is not the only constraint! We also need the areas of transverse slices to not be too small either. For example, let’s look at the following picture in $\mathbb{R}^4$, which we think of as a piece of a $4$-dimensional orbit. 
+So now we can quantify the fact that vectors cannot be *too* localized near $\lambda$. If $\dim \mathcal{O} = 2$, we cannot localize on sets of co-area $\ll 1$. This was the analogue of the condition $ab \gtrsim \ell$. In higher dimensions, this would say like the $\omega$-volume $\ll 1$, but this is not the only constraint! We also need the areas of transverse slices to not be too small either. For example, let's look at the following picture in $\mathbb{R}^4$, which we think of as a piece of a $4$-dimensional orbit. 
 
-![Untitled](Untitled_2.png)
+![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%202.png)
 
-Then we cannot localize to a set that looks like this which is very narrow in one direction and very long in the other, even if the volume is one. This is related to a topic people have been studying in symplectic geometry called “symplectic capacity”. See Fefferman’s paper “The Uncertainty Principle” for some related discussions. 
+Then we cannot localize to a set that looks like this which is very narrow in one direction and very long in the other, even if the volume is one. This is related to a topic people have been studying in symplectic geometry called "symplectic capacity''. See Fefferman's paper "The Uncertainty Principle'' for some related discussions. 
 
 ## Op Calculus
 
 Two things we want to do systematically: construct localized vectors and write vectors in terms of localized vectors. This is the point of going through the trouble of developing the $\mathrm{Op}$ calculus. 
 
-To a function $a$ on $\mathrm{Lie}(G)^\ast$, we’ll associate $\mathrm{Op}(a) : \pi \to \pi$ for any $G$-representation $\pi$. By the orbit method, we construct a basis $v_i$ for $\pi$, each localized at $\lambda_i$ $\in B_i$, for some small neighborhoods $B_i$. Then essentially $\mathrm{Op}(a)$ should just be 
+To a function $a$ on $\mathrm{Lie}(G)^\ast$, we'll associate $\mathrm{Op}(a) : \pi \to \pi$ for any $G$-representation $\pi$. By the orbit method, we construct a basis $v_i$ for $\pi$, each localized at $\lambda_i$ $\in B_i$, for some small neighborhoods $B_i$. Then essentially $\mathrm{Op}(a)$ should just be 
 
 $$
 \mathrm{Op}(a) = \sum_{i} a(\lambda_i) \mathrm{Proj}_{v_i},
 $$
 
-i.e. it’s diagonal in a basis of localized vectors and acts on $v_i$ with eigenvalue $a(\lambda_i)$. So the actual definition is 
+i.e. it's diagonal in a basis of localized vectors and acts on $v_i$ with eigenvalue $a(\lambda_i)$. So the actual definition is 
 
 $$
 \mathrm{Op}(a) \cdot v = \int_{X \in \mathrm{Lie}(G) , |X| \ll 1} a^\vee(X) \left(e^X \cdot v\right)\,dX.
@@ -396,7 +396,7 @@ We should always think of $a$ as a smooth function which looks for instance like
 
 ### Example
 
-$G = S^1 = \mathbb{R}/\Z$, $\mathrm{Lie}(G) = \mathbb{R}$ and consider the irreducible representations $\pi_m : x \in \mathbb{R}/\Z \to e^{2\pi i mx }.$ Then 
+$G = S^1 = \mathbb{R}/\mathbb{Z}$, $\mathrm{Lie}(G) = \mathbb{R}$ and consider the irreducible representations $\pi_m : x \in \mathbb{R}/\mathbb{Z} \to e^{2\pi i mx }.$ Then 
 
 $$
 \mathrm{Op}(a)v = \left(\int_{x \in \mathbb{R}} a^\vee(x)e^{imx}\,dx \right)v = a(m)v.
@@ -418,7 +418,7 @@ Properties of $a \mapsto \mathrm{Op}(a)$
 
 - $a = 1$ implies that $\mathrm{Op}(a)$ is the identity
 - If $a$ is real, then $\mathrm{Op}(a)$ is self-adjoint.
-- If $a’ = g \cdot a$, then $\mathrm{Op}(a’) = g\mathrm{Op}(a)g^{-1}$ where $a’(\lambda) = a(g^{-1}\lambda g).$
+- If $a' = g \cdot a$, then $\mathrm{Op}(a') = g\mathrm{Op}(a)g^{-1}$ where $a'(\lambda) = a(g^{-1}\lambda g).$
 - Most importantly
     1. $\mathrm{Op}(a) \mathrm{Op}(b) \approx \mathrm{Op}(ab)$
     2. $\mathrm{trace}_\pi \mathrm{Op}(a) \approx \int_{\mathcal{O}_\pi}(a)$ as long as $\pi$ is irreducible and satisfies the conditions for the Kirillov formula to hold. 
@@ -427,7 +427,7 @@ Properties of $a \mapsto \mathrm{Op}(a)$
     
 - Example : If $G$ is the Heisenberg group and $\pi = L^2(\mathbb{R})$, then $\mathrm{Op}(a)$ is a pseudodifferential operator.
 
-Let’s prove that if $v$ is in the image of $\mathrm{Op}(a)$, with $a$ a bump around $\lambda$, then $v$ is localized at $\lambda$. To do this we just need to bound $||\bar{X}v||$. We have
+Let's prove that if $v$ is in the image of $\mathrm{Op}(a)$, with $a$ a bump around $\lambda$, then $v$ is localized at $\lambda$. To do this we just need to bound $||\bar{X}v||$. We have
 
 $$
 ||\overline{X}v|| = ||\overline{X}\mathrm{Op}(a)v|| = || \mathrm{Op}(\overline{X}) \mathrm{Op}(a)v|| = ||\mathrm{Op}(\overline{X} \cdot a)v|| \lesssim ||\overline{X}a||_{L^\infty} = ||\overline{X}||_{L^\infty(B(\lambda,R))} = O(R),
@@ -439,11 +439,11 @@ where we think of $\overline{X}$ as the linear function $\tau \mapsto \langle X,
 
 This is basically the formalism that appears in Nelson 2021, Sec 14.1. 
 
-Let $T$ be an asymptotic parameter that traverses a sequence $\{T\}$ of positive real numbers tending off to $\infty$. Most quantities $x$ that we consider are “ $T$-dependent”. This means there is a map $x : T \mapsto x_T$. We used the word “fixed” to mean “independent of $T$”. 
+Let $T$ be an asymptotic parameter that traverses a sequence $\{T\}$ of positive real numbers tending off to $\infty$. Most quantities $x$ that we consider are " $T$-dependent''. This means there is a map $x : T \mapsto x_T$. We used the word "fixed'' to mean "independent of $T$''. 
 
 We can also consider $T$-dependent sets $X = X_T$ and $T$-dependent elements $x = x_T$. The condition $x \in X$ means $x_T \in X_T$ for all $T$, while $x \not\in X$ means $x_T \not\in X_T$ for all $T$. This notation violates the law of the excluded middle, since we can have $x_T \in X_T$ for some $T$, but not for others. WE can restore that law by passing to subsequences of the sequence of parameters $T$. 
 
-By a *class*, we mean a fixed collection of $T$-dependent sets. We say that a $T$-dependent element lies in a given class if it lies in one of the $T$-dependent sets in the given collection. For example, given a $T$-dependent normed vector space , the class $O(1)$ inside $V$ is defined to consist of all $T$-dependent subsets $S=S_T$ of $V = V_T$ such that there is a fixed $C \geq 0$ so that for all $T$, we have $||v_T|| \leq C%$ for all $v_T \in S_T$. 
+By a *class*, we mean a fixed collection of $T$-dependent sets. We say that a $T$-dependent element lies in a given class if it lies in one of the $T$-dependent sets in the given collection. For example, given a $T$-dependent normed vector space , the class $O(1)$ inside $V$ is defined to consist of all $T$-dependent subsets $S=S_T$ of $V = V_T$ such that there is a fixed $C \geq 0$ so that for all $T$, we have $||v_T|| \leq C$ for all $v_T \in S_T$. 
 
 For a real vector space $V$, recall that the Schwartz space $\mathcal{S}(V)$ consists of all functions whose derivatives decay faster than any polynomial. We denote $V^\wedge := \mathrm{Hom}(V, i\mathbb{R})$  the imaginary dual space so that for $x \in V$ and $\xi \in V^\wedge$, the natural pairing $\langle x, \xi \rangle \in i\mathbb{R}$. The Fourier transform is given by 
 
@@ -534,18 +534,18 @@ Let $\tau = \tau_T \in \mathcal{O}_\pi$ be $O(T)$ and uniformly regular. Then :
 
 ### Approximate Projectors
 
-Let $G$ be a fixed real reductive group. Let $\tau$ be a uniformly regular $T$-dependent element of $\mathfrak{g}^\wedge$. We choose coordinates $\xi = (\xi’, \xi”)$ on $\mathfrak{g}^\wedge$, where $\xi’$ consists of the directions tangent to $G\cdot \tau$ at $\tau$ and $\xi”$ consists of the perpendicular directions. Thus $\xi’$ has dimension $\dim(G) - \mathrm{rank}(G)$ and $\xi”$ has dimensions $\mathrm{rank}(G)$. 
+Let $G$ be a fixed real reductive group. Let $\tau$ be a uniformly regular $T$-dependent element of $\mathfrak{g}^\wedge$. We choose coordinates $\xi = (\xi', \xi'')$ on $\mathfrak{g}^\wedge$, where $\xi'$ consists of the directions tangent to $G\cdot \tau$ at $\tau$ and $\xi''$ consists of the perpendicular directions. Thus $\xi'$ has dimension $\dim(G) - \mathrm{rank}(G)$ and $\xi''$ has dimensions $\mathrm{rank}(G)$. 
 
 <aside>
 💡 We define the *coin-shaped region* $R_{\tau, \epsilon}$ to be the following class in $\mathfrak{g}^\wedge$:
-$R_{\tau, \epsilon} : = \{\tau + \xi : \xi’ = O(T^{1/2 + \epsilon}), \xi” = O(T^\epsilon)\}.$
+$R_{\tau, \epsilon} : = \{\tau + \xi : \xi' = O(T^{1/2 + \epsilon}), \xi'' = O(T^\epsilon)\}.$
 
 </aside>
 
 We say that a $T$-dependent element $a$ of $\mathcal{S}(\mathfrak{g}^\wedge)$ is a *bump* on $R_{\tau, \epsilon}$ if there is a fixed bounded subset $\mathfrak{B}$ of $\mathcal{S}(\mathfrak{g}^\wedge)$ and a $T$-dependent element $\phi = \phi_T \in \mathfrak{B}$ so that 
 
 $$
-a(\tau + \xi) = \phi\left(\frac{\xi'}{T^{1/2+\epsilon}} , \frac{\xi"}{T^{\epsilon}}\right).
+a(\tau + \xi) = \phi\left(\frac{\xi'}{T^{1/2+\epsilon}} , \frac{\xi''}{T^{\epsilon}}\right).
 $$
 
 We note that the coin-shaped neighborhood $R_{\tau, \epsilon}$ is a subsclass of the ball $B_{\tau, \epsilon}$ defined earlier. 
@@ -558,7 +558,7 @@ $$
 
 <aside>
 💡 The Fourier transform $a^\vee$ is, up to a normalizing scalar, a $\tau$-modulated bump on the dual coin-shaped region 
-$R_{\tau, \epsilon}^\vee = \{x \in \mathfrak{g} : x’ \ll T^{-1/2 - \epsilon}, x” \ll T^{-\epsilon}\}$, where $x = (x’, x”)$ are the coordinates dual to $\xi = (\xi’, \xi”).$
+$R_{\tau, \epsilon}^\vee = \{x \in \mathfrak{g} : x' \ll T^{-1/2 - \epsilon}, x'' \ll T^{-\epsilon}\}$, where $x = (x', x'')$ are the coordinates dual to $\xi = (\xi', \xi'').$
 
 </aside>
 
@@ -605,7 +605,7 @@ $$
 Let $\pi$ be a complex representation of $\mathrm{SO}(3)$. It can be decomposed into eigenspaces for $R_3$. Since $\exp(2\pi R_3) = 1$, the eigenvalues for the action of $iR_3$ are given by integers: 
 
 $$
-\pi = \oplus_{m \in \Z} \pi(m) , \ \ \pi(m):= \{v \in \pi: iR_3v = mv \}.
+\pi = \oplus_{m \in \mathbb{Z}} \pi(m) , \ \ \pi(m):= \{v \in \pi: iR_3v = mv \}.
 $$
 
 The $m$ for which $\pi(m)\neq 0$ are called the *weights* of $\pi$. From the commutation relations we see that 
@@ -657,7 +657,7 @@ Hence every vector in $M$ is localized at the $T$-dependent element $\tau \in \m
 Let $M$ denote the class of $T$-dependent vectors in $\pi$ of the form $\sum a_m e_m$ with the following properties :
 
 1. $a_m = 0$ unless $m = O(T^{1/2})$
-2. The function of $\theta \in \mathbb{R} / \Z$ given by 
+2. The function of $\theta \in \mathbb{R} / \mathbb{Z}$ given by 
 $a(\theta) := \sum_n a_n e(n\theta)$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $\ell, k \in \Z_{\geq 0}$, 
 
 $$
@@ -689,13 +689,13 @@ $\tau := (0, -iT, 0)$.
 
 ### The Group $\mathrm{PGL}_2(\mathbb{R})$ via Weight Vectors
 
-Let $\pi$ be the $T$-dependent representation of $\rm{PGL}_2(\mathbb{R})$ given by the tempered principal series representation $\pi(t, \epsilon)$, where $t = t_T := T$, while $\epsilon \in \{\pm 1\}$ is fixed. Let $M$ be the class of $T$-dependent vectors $v \in \pi$ of the form $v = \sum_m a_m e_m$ where the coefficients satisfy the support condition 
+Let $\pi$ be the $T$-dependent representation of $\mathrm{PGL}_2(\mathbb{R})$ given by the tempered principal series representation $\pi(t, \epsilon)$, where $t = t_T := T$, while $\epsilon \in \{\pm 1\}$ is fixed. Let $M$ be the class of $T$-dependent vectors $v \in \pi$ of the form $v = \sum_m a_m e_m$ where the coefficients satisfy the support condition 
 
 $$
 a_m \neq 0 \implies m = O(T^{1/2})
 $$
 
-and the function $a(\theta) = \sum a_n e(n\theta)$, $\theta \in \mathbb{R}/\Z$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $k, \ell \in \Z_{\geq 0}$, 
+and the function $a(\theta) = \sum a_n e(n\theta)$, $\theta \in \mathbb{R}/\mathbb{Z}$ is an $L^2$-normalized bump of width $T^{-1/2}$, in the following sense: for each $k, \ell \in \Z_{\geq 0}$, 
 
 $$
 a^{(\ell)}(\theta) \ll T^{1/4 +\ell/2}\left(1 + \frac{||\theta||}{T^{-1/2}}\right)^{-k},
@@ -745,7 +745,9 @@ where $\Omega_\pi = -1/4 - t^2$ is the eigenvalue of the Casimir operator $\Omeg
 Then we can calculate 
 
 $$
-Xv - Tv = \sum a_{m-1} ((m-1)m - \Omega_\pi)^{1/2}e_{m} - \sum a_m Te_m \\= \sum a_{m-1}((m^2 - m +1/4 + T^2)^{1/2}e_m - \sum a_m Te_m \\ \in T^{1/2}M
+Xv - Tv = \sum a_{m-1} ((m-1)m - \Omega_\pi)^{1/2}e_{m} - \sum a_m Te_m \\
+= \sum \left(a_{m-1}(m^2 - m +1/4 + T^2)^{1/2} - a_m T\right)e_m \\
+\in T^{1/2}M
 $$
 
  
@@ -761,7 +763,8 @@ We turn to another example in the Kirillov model.
 The action of the Borel $B$ on the Kirillov model is explicit. We have
 
 $$
-  n(x) W(y) = \psi(y x) W(y), \\a(u) W(y) = W(y u).
+  n(x) W(y) = \psi(y x) W(y), \\
+a(u) W(y) = W(y u).
 
 $$
 
@@ -822,7 +825,7 @@ where $\phi$ belongs to some fixed bounded subset of the space $C_c^\infty(\math
     1. $eW - i\alpha W \in T^{1/2}M$
     2. $hW - i \rho W \in T^{1/2}M$
     3. $fW - i\beta W \in T^{1/2}M$ where $\beta := \frac{-\rho^2 - \Omega_\pi}{\alpha}.$
-3. Every element of $M$ is localized at the $T$-dependent element of $\frak{g}^\wedge$ given by 
+3. Every element of $M$ is localized at the $T$-dependent element of $\mathfrak{g}^\wedge$ given by 
 
 $$
 \tau = i\begin{pmatrix} \rho & \beta \\ \alpha & -\rho \end{pmatrix},
@@ -861,7 +864,7 @@ $$
 Informally, at least when $\beta \asymp T$, this says that $wW(y)$ looks roughly like $T^{1/4}|y|^{-i\rho}$ times a bump function on $\beta + O(T^{1/2})$. 
 
 <aside>
-💡 In this discussion, we could’ve also taken $\pi$ to be a discrete series representation $\pi(k)$ with $k = O(T)$.
+💡 In this discussion, we could've also taken $\pi$ to be a discrete series representation $\pi(k)$ with $k = O(T)$.
 
 </aside>
 
