@@ -167,7 +167,7 @@ Before we prove this, it's easier to first see that a vector cannot be $0$-local
 Now to prove the first thing, without loss of generality let's take $\lambda = (0,0, \ell+1/2)$. Let $a = ||J_1v||, b = ||J_2v||$ where $||v|| = 1$. 
 
 <aside>
-💡 Claim : $ab + \frac{1}{\ell}a^2 + \frac{1}{\ell}b^2 \geq \frac{\ell(\ell+1)}{2}$ $\implies$ either $a$ or $b > \sqrt{\ell}/2$.
+💡 Claim : $ab + \frac{1}{\ell}a^2 + \frac{1}{\ell}b^2 \geq \frac{\ell(\ell+1)}{2} \implies \text{either } a \text{ or } b > \sqrt{\ell}/2$.
 
 </aside>
 
@@ -364,7 +364,7 @@ This also kind of explains the scale. Scaling the orbit by $R$ only scales the a
 
 **Kirillov Formula**
 
-As above, any $\mathcal{O}$ gets a non-degenerate $2$-form $\omega$. (In fact, $\omega$ is closed, i.e. $\,d\omega = 0$). This implies $\omega^{\dim \mathcal{O}/2} := \omega \wedge \omega \wedge \dots \wedge \omega$ is a volume form on $\mathcal{O}$. Then the Kirillov formula says that for any compact $G$ and any irreducible $\pi$, there exists $\mathcal{O}_\pi \subseteq$ $\mathrm{Lie}(G)^\ast$ s.t. 
+As above, any $\mathcal{O}$ gets a non-degenerate $2$-form $\omega$. (In fact, $\omega$ is closed, i.e. $\,d\omega = 0$). This implies $\omega^{\dim \mathcal{O}/2} := \omega \wedge \omega \wedge \dots \wedge \omega$ is a volume form on $\mathcal{O}$. Then the Kirillov formula says that for any compact $G$ and any irreducible $\pi$, there exists $\mathcal{O}_\pi \subseteq \mathrm{Lie}(G)^\ast$ s.t. 
 
 $$
 \chi \cdot \sqrt{j}(e^X) = \left(\text{ volume form } \left(\frac{\omega}{2\pi}\right)^{\dim \mathcal{O}_\pi/2} \text{ on } \mathcal{O}_\pi\right)^\wedge.
@@ -380,7 +380,7 @@ Then we cannot localize to a set that looks like this which is very narrow in on
 
 Two things we want to do systematically: construct localized vectors and write vectors in terms of localized vectors. This is the point of going through the trouble of developing the $\mathrm{Op}$ calculus. 
 
-To a function $a$ on $\mathrm{Lie}(G)^\ast$, we'll associate $\mathrm{Op}(a) : \pi \to \pi$ for any $G$-representation $\pi$. By the orbit method, we construct a basis $v_i$ for $\pi$, each localized at $\lambda_i$ $\in B_i$, for some small neighborhoods $B_i$. Then essentially $\mathrm{Op}(a)$ should just be 
+To a function $a$ on $\mathrm{Lie}(G)^\ast$, we'll associate $\mathrm{Op}(a) : \pi \to \pi$ for any $G$-representation $\pi$. By the orbit method, we construct a basis $v_i$ for $\pi$, each localized at $\lambda_i \in B_i$, for some small neighborhoods $B_i$. Then essentially $\mathrm{Op}(a)$ should just be 
 
 $$
 \mathrm{Op}(a) = \sum_{i} a(\lambda_i) \mathrm{Proj}_{v_i},
@@ -525,7 +525,7 @@ Let $\pi = \pi_T$ be a $T$-dependent irreducible unitary representation of $G$. 
 1. $G$ is reductive and $\pi$ is tempered, or 
 2. $G = \mathrm{GL}_n(\mathbb{R})$ and $\pi$ is generic. 
 
-Assume that the infinitesimal character $\lambda_\pi$ of $\pi$ has the property that its rescaling $T^{-1}\lambda_\pi$ lies in a fixed compact collection of infinitesimal characters. Define the $G$-invariant subset $\mathcal{O}_\pi \subseteq \mathfrak{g}^\wedge$, as follows. In the first case (1), let it denote the coadjoint orbit assigned to $\pi$ by the Kirillov formula. In the second case (2), let it denote the preimage of $\lambda_\pi$ \in $\mathfrak{g}^\wedge$ under the natural map. 
+Assume that the infinitesimal character $\lambda_\pi$ of $\pi$ has the property that its rescaling $T^{-1}\lambda_\pi$ lies in a fixed compact collection of infinitesimal characters. Define the $G$-invariant subset $\mathcal{O}_\pi \subseteq \mathfrak{g}^\wedge$, as follows. In the first case (1), let it denote the coadjoint orbit assigned to $\pi$ by the Kirillov formula. In the second case (2), let it denote the preimage of $\lambda_\pi \in \mathfrak{g}^\wedge$ under the natural map. 
 
 Let $\tau = \tau_T \in \mathcal{O}_\pi$ be $O(T)$ and uniformly regular. Then : 
 
