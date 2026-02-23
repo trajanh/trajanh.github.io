@@ -1,6 +1,7 @@
 (async function loadProjects() {
   const container = document.getElementById('project-grid');
   const username = 'trajanh';
+  const hiddenRepos = new Set([`${username}.github.io`]);
 
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`);
@@ -10,7 +11,7 @@
 
     const repos = await response.json();
     const visibleRepos = repos
-      .filter((repo) => !repo.fork && !repo.archived)
+      .filter((repo) => !repo.fork && !repo.archived && !hiddenRepos.has(repo.name))
       .slice(0, 12);
 
     if (visibleRepos.length === 0) {
