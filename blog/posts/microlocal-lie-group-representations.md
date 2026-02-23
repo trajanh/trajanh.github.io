@@ -194,7 +194,7 @@ $$
 
 Interpretation : Roughly our inequality says $ab \gtrsim \ell$, which if we think of our vector in coordinates, it gives a lower bound on the area of something $v$ is allowed to be localized. 
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled.png)
+![Untitled](Untitled.png)
 
 ### Interlude : The Heisenberg Group
 
@@ -281,7 +281,7 @@ $$
 
 Let's also suppose that $a^2 + b^2 < 0.9\ell^2$. Then $v = v^+ + v^-$ where $v^+$ is localized at $(a,b, \sqrt{\ell - a^2 - b^2})$ and $v^{-}$ is localized at $(a,b, -\sqrt{\ell^2 - a^2 - b^2}).$
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%201.png)
+![Untitled](Untitled_1.png)
 
 Idea: We already know $J_1^2 + J_2^2 + J_3^2 = -\ell(\ell+1)$, so morally speaking once we know $J_1$ and $J_2$, we know $J_3$ up to sign. 
 So instead let's write $v$ as a linear combination of localized vectors $\int_{\tau \in \mathcal{O}} v_\tau$ and we will show that only $\tau^+$ and $\tau^{-}$ contribute, where $\tau^+$ and $\tau^-$ are the two points in the picture above. 
@@ -372,7 +372,7 @@ $$
 
 So now we can quantify the fact that vectors cannot be *too* localized near $\lambda$. If $\dim \mathcal{O} = 2$, we cannot localize on sets of co-area $\ll 1$. This was the analogue of the condition $ab \gtrsim \ell$. In higher dimensions, this would say like the $\omega$-volume $\ll 1$, but this is not the only constraint! We also need the areas of transverse slices to not be too small either. For example, let's look at the following picture in $\mathbb{R}^4$, which we think of as a piece of a $4$-dimensional orbit. 
 
-![Untitled](Some%20Remarks%20on%20Microlocal%20Analysis%20of%20Lie%20Group%20R/Untitled%202.png)
+![Untitled](Untitled_2.png)
 
 Then we cannot localize to a set that looks like this which is very narrow in one direction and very long in the other, even if the volume is one. This is related to a topic people have been studying in symplectic geometry called "symplectic capacity''. See Fefferman's paper "The Uncertainty Principle'' for some related discussions. 
 
