@@ -5,6 +5,36 @@
 
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
+  const isAbsoluteUrl = (value) => /^(https?:)?\/\//i.test(value) || value.startsWith('data:') || value.startsWith('mailto:') || value.startsWith('#');
+  const resolveRelativeUrl = (rawUrl, basePath) => {
+    try {
+      return new URL(rawUrl, new URL(basePath, window.location.origin)).toString();
+    } catch (error) {
+      return rawUrl;
+    }
+  };
+  const rewriteRelativeAssetUrls = (html, basePath) => {
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
+
+    wrapper.querySelectorAll('img[src]').forEach((img) => {
+      const src = img.getAttribute('src') || '';
+      if (!src || isAbsoluteUrl(src)) {
+        return;
+      }
+      img.setAttribute('src', resolveRelativeUrl(src, basePath));
+    });
+
+    wrapper.querySelectorAll('a[href]').forEach((anchor) => {
+      const href = anchor.getAttribute('href') || '';
+      if (!href || isAbsoluteUrl(href)) {
+        return;
+      }
+      anchor.setAttribute('href', resolveRelativeUrl(href, basePath));
+    });
+
+    return wrapper.innerHTML;
+  };
 
   if (!slug) {
     titleNode.textContent = 'Post not found';
@@ -37,11 +67,12 @@
     }
 
     const rawContent = await postResponse.text();
+    const basePath = post.path;
 
     if (post.format === 'html') {
-      bodyNode.innerHTML = rawContent;
+      bodyNode.innerHTML = rewriteRelativeAssetUrls(rawContent, basePath);
     } else {
-      bodyNode.innerHTML = marked.parse(rawContent);
+      bodyNode.innerHTML = rewriteRelativeAssetUrls(marked.parse(rawContent), basePath);
     }
 
     if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
