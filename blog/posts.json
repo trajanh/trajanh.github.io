@@ -1,5 +1,13 @@
 [
   {
+    "slug": "generals-prep",
+    "title": "Generals Prep",
+    "date": "2026-06-16",
+    "description": "A document I made to prepare for generals at Princeton.",
+    "format": "markdown",
+    "path": "/blog/posts/generals-prep.md"
+  },
+  {
     "slug": "microlocal-lie-group-representations",
     "title": "Some Remarks on Microlocal Analysis of Lie Group Representations",
     "date": "2026-02-23",
